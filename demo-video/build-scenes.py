@@ -12,7 +12,6 @@ css='''@font-face{font-family:Inter;src:url(assets/fonts/inter-latin-400-normal.
 for ident,duration,kicker,title,image,calls in scenes:
  cid='s'+ident
  style=css.replace('P-',cid+'-')
- if ident=='03-dispute':style+=f'.{cid}-image{{object-fit:none;object-position:0px -600px}}'
  if ident in ['05-custody','06-expiration']:style+=f'.{cid}-wide{{top:205px}} .{cid}-wide-title{{font-size:64px;margin-bottom:28px}} .{cid}-card{{padding:24px}} .{cid}-number{{font-size:62px}} .{cid}-card p{{font-size:25px}}'
  if image:
   inside=f'<div class="{cid}-left"><div class="{cid}-kicker">{kicker}</div><h1 id="{cid}-title" class="{cid}-title">{title}</h1>'+''.join(f'<p id="{cid}-call-{i}" class="{cid}-call">{text}</p>' for i,(_,text) in enumerate(calls))+'</div>'

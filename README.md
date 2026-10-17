@@ -6,6 +6,10 @@ When an AI provider's billing dashboard disappears, its users lose their only vi
 
 Live app: https://sumplus-real.github.io/sumplus-receipt-lens/
 
+Demo video (140 seconds): https://sumplus-real.github.io/sumplus-receipt-lens/demo.html
+
+Reproducible video source: [demo-video](demo-video/README.md).
+
 ## Run
 
 Node 20.19+ and npm. Exact dependency versions are locked.
@@ -65,6 +69,8 @@ The official anonymous RPC has a limited query-cost budget. During the sprint it
 
 ## Native recipient custody
 
-`node scripts/ownership-probe.mjs` uses only dedicated synthetic Tiramisu wallets. It funds the recipient with a small internal test-token transfer, creates a disposable probe, transfers it, proves old-publisher patch/delete requests fail with NotOwner without broadcasting, and proves recipient patch succeeds. Then two successful batches transfer all ten main entities, including the impersonator's entity, to the recipient. `public/ownership-evidence.json` records those transaction hashes and controls. A separate post-reset read remains required to verify main owners and unchanged creator/signature behavior; see the readbackPending flag.
+`node scripts/ownership-probe.mjs` uses only dedicated synthetic Tiramisu wallets. It funds the recipient with a small internal test-token transfer, creates a disposable probe, transfers it, proves old-publisher patch/delete requests fail with NotOwner without broadcasting, and proves recipient patch succeeds. Then two successful batches transfer all ten main entities, including the impersonator's entity, to the recipient. `public/ownership-evidence.json` records those transaction hashes and controls. A post-reset read verified all ten main owners and unchanged creator/signature behavior; see public/recipient-acceptance.json.
 
 This is recipient custody, not immutable storage. The recipient can edit/delete/extend, but cannot forge the publisher signature. The read-only app never asks a viewer to connect a wallet or sign anything; the recipient is a synthetic demonstration role, not the viewer's personal address. Tiramisu currently rejects EVM contract creation; the implementation uses supported native Arkiv operations, with no deployed custody contract.
+
+Post-reset current reads succeeded for both recipient-scoped sessions, each with one20-record page and Arkiv-Cost100. Exact response headers and verification outcomes are in public/recipient-acceptance.json. This confirms a bounded recovery, not unlimited anonymous capacity.

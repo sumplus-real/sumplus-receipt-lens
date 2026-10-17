@@ -72,5 +72,28 @@
     }
   ],
   "mutationsComplete": true,
-  "readbackPending": true
+  "readbackPending": false,
+  "readbackVerifiedAt": "2026-10-17T19:30:00.981Z",
+  "mainReadbacks": [
+    {
+      "session": "synthetic-clean-20261018",
+      "passed": true,
+      "entityCount": 4,
+      "allOwnedByRecipient": true,
+      "originalCreatorsPreserved": true,
+      "expectedTrusted": 4,
+      "complete": true,
+      "totalMicro": "60000"
+    },
+    {
+      "session": "synthetic-dispute-20261018",
+      "passed": true,
+      "entityCount": 6,
+      "allOwnedByRecipient": true,
+      "originalCreatorsPreserved": true,
+      "expectedTrusted": 4,
+      "complete": false,
+      "totalMicro": "40000"
+    }
+  ]
 }
