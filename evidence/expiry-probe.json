@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-10-17T18:35:25.513Z",
+  "expected": "Entity queryable before short expiration, absent afterward; creation transaction still retrievable",
+  "txHash": "0xb7ced167189c8f687c52588c17d84609adc4a587de98c41bd55cc09882a2a439",
+  "entityKey": "0x8e15e6290287de4ee573ee1eb632a30bc2e96218025ef1228b534bddb324ed2b",
+  "expiresAt": "706453",
+  "observations": [
+    {
+      "checkedAt": "2026-10-17T18:43:58.639Z",
+      "blockNumber": "706439",
+      "found": true
+    },
+    {
+      "checkedAt": "2026-10-17T18:44:39.924Z",
+      "blockNumber": "706460",
+      "found": false
+    }
+  ],
+  "creationTransaction": {
+    "status": "success",
+    "blockNumber": "706438",
+    "transactionHash": "0xb7ced167189c8f687c52588c17d84609adc4a587de98c41bd55cc09882a2a439"
+  }
+}

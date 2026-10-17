@@ -1,0 +1,420 @@
+{
+  "checkedAt": "2026-10-17T18:43:59.153Z",
+  "chain": 7738577,
+  "synthetic": true,
+  "checks": [
+    {
+      "name": "10 creation receipts and on-chain creators",
+      "pass": true,
+      "detail": "Every tx mined successfully; getEntity creator equals receipt.from"
+    },
+    {
+      "name": "synthetic-clean-20261018: populated cursor pagination",
+      "pass": true,
+      "detail": "SDK cursor pages read at one block; exact entity count and key uniqueness asserted"
+    },
+    {
+      "name": "Clean signed session exact subtotal",
+      "pass": true,
+      "detail": "0.060000 USDC statement subtotal, not actual spend or payment"
+    },
+    {
+      "name": "synthetic-clean-20261018: actual typed u64 round-trip",
+      "pass": true,
+      "detail": "SDK decoder returned u64 tags for all three numeric product attributes"
+    },
+    {
+      "name": "synthetic-clean-20261018: createdBy filters chain response",
+      "pass": true,
+      "detail": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615) AND $creator = addr(0xCc115e9cC6a7053C6F4999eDd02076C08d17F958)"
+    },
+    {
+      "name": "synthetic-dispute-20261018: populated cursor pagination",
+      "pass": true,
+      "detail": "SDK cursor pages read at one block; exact entity count and key uniqueness asserted"
+    },
+    {
+      "name": "Different creator cannot impersonate publisher",
+      "pass": true,
+      "detail": "Real second creator publishes identical session/provider identifiers; excluded"
+    },
+    {
+      "name": "Altered signed payload rejected on real trusted-creator entity",
+      "pass": true,
+      "detail": "Publisher-created synthetic entity altered after signing; origin alone is insufficient"
+    },
+    {
+      "name": "Duplicate and missing sequence keep bill incomplete",
+      "pass": true,
+      "detail": "Only unique trusted statements contribute, ambiguity remains explicit"
+    },
+    {
+      "name": "synthetic-dispute-20261018: actual typed u64 round-trip",
+      "pass": true,
+      "detail": "SDK decoder returned u64 tags for all three numeric product attributes"
+    },
+    {
+      "name": "synthetic-dispute-20261018: createdBy filters chain response",
+      "pass": true,
+      "detail": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615) AND $creator = addr(0xCc115e9cC6a7053C6F4999eDd02076C08d17F958)"
+    },
+    {
+      "name": "Real numeric amount range",
+      "pass": true,
+      "detail": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(20000) AND period >= u64(0) AND period <= u64(18446744073709551615)"
+    },
+    {
+      "name": "Billing-day positive and known-empty negative range",
+      "pass": true,
+      "detail": "Same known-populated session: Oct18 returns4, Oct19 returns0"
+    },
+    {
+      "name": "Real numeric sequence filter",
+      "pass": true,
+      "detail": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615) AND sequence >= u64(2)"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "clean-1",
+      "entityKey": "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd",
+      "txHash": "0x169e0cf39dce74d3800bfd63205f567121b4ae7173b27359a37afaf1cfb8576e",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706369",
+      "gasUsed": "123288",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123288000246576",
+      "expiresAt": "2002369",
+      "createdAt": "706369",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x169e0cf39dce74d3800bfd63205f567121b4ae7173b27359a37afaf1cfb8576e"
+    },
+    {
+      "id": "clean-2",
+      "entityKey": "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+      "txHash": "0x80bfd1400eadfdae78de6151bfad68a2660817ba8218a578f5cc717b46a8a003",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706372",
+      "gasUsed": "123288",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123288000246576",
+      "expiresAt": "2002372",
+      "createdAt": "706372",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x80bfd1400eadfdae78de6151bfad68a2660817ba8218a578f5cc717b46a8a003"
+    },
+    {
+      "id": "clean-3",
+      "entityKey": "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+      "txHash": "0xea4a34a0d3832d9018c8e50237909e999fbce2344a85e9fe88f500b6dd6f9067",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706374",
+      "gasUsed": "123288",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123288000246576",
+      "expiresAt": "2002374",
+      "createdAt": "706374",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0xea4a34a0d3832d9018c8e50237909e999fbce2344a85e9fe88f500b6dd6f9067"
+    },
+    {
+      "id": "clean-close",
+      "entityKey": "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+      "txHash": "0x4a42134373711e6304ce9928b72acb58c549b039859122836666cb05f853e7bb",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706378",
+      "gasUsed": "123160",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123160000246320",
+      "expiresAt": "4594378",
+      "createdAt": "706378",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x4a42134373711e6304ce9928b72acb58c549b039859122836666cb05f853e7bb"
+    },
+    {
+      "id": "dispute-1",
+      "entityKey": "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e",
+      "txHash": "0x4423801a2362346b01146aabaff399c2a0bbb05f87c1ff261a34e888ae8767b2",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706381",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123320000246640",
+      "expiresAt": "2002381",
+      "createdAt": "706381",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x4423801a2362346b01146aabaff399c2a0bbb05f87c1ff261a34e888ae8767b2"
+    },
+    {
+      "id": "dispute-3",
+      "entityKey": "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+      "txHash": "0x95b9be10f92eba6e14d78c91c6255e15952dc132ad7f76ff2542109259174aaa",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706383",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123320000246640",
+      "expiresAt": "2002383",
+      "createdAt": "706383",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x95b9be10f92eba6e14d78c91c6255e15952dc132ad7f76ff2542109259174aaa"
+    },
+    {
+      "id": "dispute-duplicate-3",
+      "entityKey": "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+      "txHash": "0x7892a9dc8ce0a649b54ad7585f24dd570bad5aaada8916de4e2f5eae95e4c194",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706386",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123320000246640",
+      "expiresAt": "2002386",
+      "createdAt": "706386",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x7892a9dc8ce0a649b54ad7585f24dd570bad5aaada8916de4e2f5eae95e4c194"
+    },
+    {
+      "id": "dispute-tampered-2",
+      "entityKey": "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+      "txHash": "0x8e3950b5c1e1142ee4815eaf6787ad92f3636939e2c8471ab77cceb8e0e809f8",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706388",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123320000246640",
+      "expiresAt": "2002388",
+      "createdAt": "706388",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x8e3950b5c1e1142ee4815eaf6787ad92f3636939e2c8471ab77cceb8e0e809f8"
+    },
+    {
+      "id": "dispute-close",
+      "entityKey": "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+      "txHash": "0x9232126164ce4c7f8a26b68a3f5ee8cbb3f071b1066de41789661005352ed544",
+      "from": "0xcc115e9cc6a7053c6f4999edd02076c08d17f958",
+      "status": "success",
+      "blockNumber": "706392",
+      "gasUsed": "123192",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123192000246384",
+      "expiresAt": "4594392",
+      "createdAt": "706392",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x9232126164ce4c7f8a26b68a3f5ee8cbb3f071b1066de41789661005352ed544"
+    },
+    {
+      "id": "spoof-2",
+      "entityKey": "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+      "txHash": "0x22c0be9e60daafbd8d8e0ce88a19485ca816e8bbb3c6bac03dca2b721c876582",
+      "from": "0xc04b75156c2e1280927cd87f3bce66ed20e73c2f",
+      "status": "success",
+      "blockNumber": "706396",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "executionFeeWei": "123320000246640",
+      "expiresAt": "2002396",
+      "createdAt": "706396",
+      "explorer": "https://tiramisu.explorer.arkiv.network/tx/0x22c0be9e60daafbd8d8e0ce88a19485ca816e8bbb3c6bac03dca2b721c876582"
+    }
+  ],
+  "queries": [
+    {
+      "blockNumber": "706444",
+      "pages": 2,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T18:44:09.186Z",
+      "keys": [
+        "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+        "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+        "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+        "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd"
+      ],
+      "analysis": {
+        "receipts": 3,
+        "unique": 3,
+        "excluded": 0,
+        "issues": [],
+        "complete": true,
+        "totalMicro": "60000",
+        "settlementVerified": false
+      },
+      "verdicts": [
+        {
+          "key": "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "0",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "3",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "2",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "1",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "blockNumber": "706445",
+      "pages": 2,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615) AND $creator = addr(0xCc115e9cC6a7053C6F4999eDd02076C08d17F958)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T18:44:10.722Z",
+      "keys": [
+        "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+        "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+        "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+        "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd"
+      ],
+      "purpose": "immutable creator filter"
+    },
+    {
+      "blockNumber": "706446",
+      "pages": 3,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T18:44:12.861Z",
+      "keys": [
+        "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+        "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+        "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+        "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+        "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+        "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e"
+      ],
+      "analysis": {
+        "receipts": 3,
+        "unique": 2,
+        "excluded": 2,
+        "issues": [
+          "Duplicate sequence 3",
+          "Missing sequence 2",
+          "Amount total differs from signed close statement"
+        ],
+        "complete": false,
+        "totalMicro": "40000",
+        "settlementVerified": false
+      },
+      "verdicts": [
+        {
+          "key": "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+          "creator": "0xC04B75156C2e1280927CD87f3bCe66eD20E73C2f",
+          "sequence": "2",
+          "trusted": false,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "0",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "2",
+          "trusted": false,
+          "valid": false,
+          "errors": [
+            "SIGNATURE_CREATOR_MISMATCH"
+          ]
+        },
+        {
+          "key": "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "3",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "3",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        },
+        {
+          "key": "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "sequence": "1",
+          "trusted": true,
+          "valid": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "blockNumber": "706447",
+      "pages": 3,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615) AND $creator = addr(0xCc115e9cC6a7053C6F4999eDd02076C08d17F958)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T18:44:14.862Z",
+      "keys": [
+        "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+        "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+        "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+        "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+        "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e"
+      ],
+      "purpose": "immutable creator filter"
+    },
+    {
+      "blockNumber": "706448",
+      "pages": 1,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(20000) AND period >= u64(0) AND period <= u64(18446744073709551615)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T18:44:16.001Z",
+      "keys": [
+        "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+        "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784"
+      ],
+      "purpose": "amount range"
+    },
+    {
+      "blockNumber": "706450",
+      "pages": 1,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND amount_micro >= u64(0) AND period >= u64(1792339200) AND period <= u64(1792425599)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T18:44:19.504Z",
+      "keys": [],
+      "purpose": "known-empty different billing day"
+    }
+  ],
+  "status": "PASS",
+  "remainingTestBalancesWei": {
+    "publisher": "4998798919997597840",
+    "adversary": "999876679999753360"
+  },
+  "firstEntityCreatedAt": "2026-10-17T18:41:40.076Z",
+  "firstWriteElapsedSeconds": 812
+}

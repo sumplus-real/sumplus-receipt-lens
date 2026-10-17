@@ -1,0 +1,133 @@
+{
+  "chain": 7738577,
+  "synthetic": true,
+  "startedAt": "2026-10-17T18:35:21.104Z",
+  "creators": {
+    "publisher": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+    "adversary": "0xC04B75156C2e1280927CD87f3bCe66eD20E73C2f"
+  },
+  "records": [
+    {
+      "id": "clean-1",
+      "role": "publisher",
+      "session": "synthetic-clean-20261018",
+      "sequence": "1",
+      "expected": "trusted",
+      "retentionDays": 30,
+      "txHash": "0x169e0cf39dce74d3800bfd63205f567121b4ae7173b27359a37afaf1cfb8576e",
+      "entityKey": "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd",
+      "expiresAt": "2002369",
+      "createdAt": "2026-10-17T18:41:40.076Z"
+    },
+    {
+      "id": "clean-2",
+      "role": "publisher",
+      "session": "synthetic-clean-20261018",
+      "sequence": "2",
+      "expected": "trusted",
+      "retentionDays": 30,
+      "txHash": "0x80bfd1400eadfdae78de6151bfad68a2660817ba8218a578f5cc717b46a8a003",
+      "entityKey": "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+      "expiresAt": "2002372",
+      "createdAt": "2026-10-17T18:41:43.274Z"
+    },
+    {
+      "id": "clean-3",
+      "role": "publisher",
+      "session": "synthetic-clean-20261018",
+      "sequence": "3",
+      "expected": "trusted",
+      "retentionDays": 30,
+      "txHash": "0xea4a34a0d3832d9018c8e50237909e999fbce2344a85e9fe88f500b6dd6f9067",
+      "entityKey": "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+      "expiresAt": "2002374",
+      "createdAt": "2026-10-17T18:41:50.456Z"
+    },
+    {
+      "id": "clean-close",
+      "role": "publisher",
+      "session": "synthetic-clean-20261018",
+      "sequence": "0",
+      "expected": "trusted",
+      "retentionDays": 90,
+      "txHash": "0x4a42134373711e6304ce9928b72acb58c549b039859122836666cb05f853e7bb",
+      "entityKey": "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+      "expiresAt": "4594378",
+      "createdAt": "2026-10-17T18:41:57.603Z"
+    },
+    {
+      "id": "dispute-1",
+      "role": "publisher",
+      "session": "synthetic-dispute-20261018",
+      "sequence": "1",
+      "expected": "trusted",
+      "retentionDays": 30,
+      "txHash": "0x4423801a2362346b01146aabaff399c2a0bbb05f87c1ff261a34e888ae8767b2",
+      "entityKey": "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e",
+      "expiresAt": "2002381",
+      "createdAt": "2026-10-17T18:42:00.757Z"
+    },
+    {
+      "id": "dispute-3",
+      "role": "publisher",
+      "session": "synthetic-dispute-20261018",
+      "sequence": "3",
+      "expected": "trusted",
+      "retentionDays": 30,
+      "txHash": "0x95b9be10f92eba6e14d78c91c6255e15952dc132ad7f76ff2542109259174aaa",
+      "entityKey": "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+      "expiresAt": "2002383",
+      "createdAt": "2026-10-17T18:42:07.904Z"
+    },
+    {
+      "id": "dispute-duplicate-3",
+      "role": "publisher",
+      "session": "synthetic-dispute-20261018",
+      "sequence": "3",
+      "expected": "trusted",
+      "retentionDays": 30,
+      "txHash": "0x7892a9dc8ce0a649b54ad7585f24dd570bad5aaada8916de4e2f5eae95e4c194",
+      "entityKey": "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+      "expiresAt": "2002386",
+      "createdAt": "2026-10-17T18:42:11.277Z"
+    },
+    {
+      "id": "dispute-tampered-2",
+      "role": "publisher",
+      "session": "synthetic-dispute-20261018",
+      "sequence": "2",
+      "expected": "invalid-signature",
+      "retentionDays": 30,
+      "txHash": "0x8e3950b5c1e1142ee4815eaf6787ad92f3636939e2c8471ab77cceb8e0e809f8",
+      "entityKey": "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+      "expiresAt": "2002388",
+      "createdAt": "2026-10-17T18:42:18.441Z"
+    },
+    {
+      "id": "dispute-close",
+      "role": "publisher",
+      "session": "synthetic-dispute-20261018",
+      "sequence": "0",
+      "expected": "trusted",
+      "retentionDays": 90,
+      "txHash": "0x9232126164ce4c7f8a26b68a3f5ee8cbb3f071b1066de41789661005352ed544",
+      "entityKey": "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+      "expiresAt": "4594392",
+      "createdAt": "2026-10-17T18:42:25.664Z"
+    },
+    {
+      "id": "spoof-2",
+      "role": "adversary",
+      "session": "synthetic-dispute-20261018",
+      "sequence": "2",
+      "expected": "untrusted-creator",
+      "retentionDays": 30,
+      "txHash": "0x22c0be9e60daafbd8d8e0ce88a19485ca816e8bbb3c6bac03dca2b721c876582",
+      "entityKey": "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+      "expiresAt": "2002396",
+      "createdAt": "2026-10-17T18:42:33.952Z"
+    }
+  ],
+  "fundingBlocked": false,
+  "complete": true
+}

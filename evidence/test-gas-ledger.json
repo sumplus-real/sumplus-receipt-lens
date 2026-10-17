@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-17T18:45:26.563Z",
+  "chain": 7738577,
+  "token": "TEST GLM ONLY",
+  "transactionCount": 11,
+  "initialTestBalanceWei": {
+    "publisher": "5000000000000000000",
+    "adversary": "1000000000000000000"
+  },
+  "remainingTestBalanceWei": {
+    "publisher": "4998798919997597840",
+    "adversary": "999876679999753360"
+  },
+  "executionFeeWei": {
+    "publisher": "1201080002402160",
+    "adversary": "123320000246640"
+  },
+  "totalExecutionFeeWei": "1324400002648800",
+  "balanceDeltaMatches": {
+    "publisher": true,
+    "adversary": true
+  },
+  "scope": "Our 11 synthetic Tiramisu creation transactions only. Excludes gas paid by the source wallet for funding transfers. No mainnet or paid model/API spending."
+}

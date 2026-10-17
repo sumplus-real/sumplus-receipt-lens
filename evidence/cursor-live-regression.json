@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-17T18:44:25.653Z",
+  "sdk": "0.8.1",
+  "waitMs": 2500,
+  "unpinned": {
+    "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615)",
+    "firstBlock": "706453",
+    "actual": "Rejected",
+    "kind": "cursor",
+    "code": -32005,
+    "message": "Query rejected (cursor, -32005): Request exceeds defined limit.. Query: app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615)",
+    "data": {
+      "message": "cursor belongs to a different query, block or select — start a new page-through"
+    }
+  },
+  "pinned": {
+    "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND amount_micro >= u64(0) AND period >= u64(0) AND period <= u64(18446744073709551615)",
+    "explicitAtBlock": "706455",
+    "actual": "PASS",
+    "entities": 6,
+    "pages": 3,
+    "keys": [
+      "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+      "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+      "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+      "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+      "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+      "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e"
+    ]
+  }
+}
