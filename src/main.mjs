@@ -24,7 +24,8 @@ $('#query').addEventListener('click',async()=>{
  const session=$('#session').value;const trustedOnly=$('#scope').value==='trusted';const minAmount=uint($('#amount').value);const owner=$('#custody').value==='reader'?READER:undefined;const pageSize=Number($('#page-size').value);const from=uint($('#period').value);const to=from===0n?18446744073709551615n:from+86399n;const rpc=$('#rpc').value.trim();
  try {
   const parsed=new URL(rpc);if(parsed.protocol!=='https:'&&!(parsed.protocol==='http:'&&['127.0.0.1','localhost'].includes(parsed.hostname)))throw Error('Use HTTPS or a local test endpoint');
-  if(parsed.username||parsed.password||parsed.search)throw Error('Use a public endpoint without credentials or query tokens');
+  if(parsed.username||parsed.password||parsed.search||parsed.hash)throw Error('Use a public endpoint without credentials, query tokens or fragments');
+  if(parsed.hostname==='rpc.tiramisu.db-chain.testnet.arkiv.network'&&parsed.pathname!=='/')throw Error('Do not paste an Arkiv access key. This reader accepts the public RPC without a key');
   const data=await readSession({session,issuer:ISSUER,trustedOnly,owner,minAmount,from,to,pageSize,rpc,onPage:p=>{if(id===requestId)$('#status').textContent=`Reading page ${p.pages} · ${p.count} entities · block ${p.block}`;}});
   const rows=await Promise.all(data.entities.map(e=>verifyEntity(e,ISSUER,{session,blockNumber:data.blockNumber})));
   if(id!==requestId)return;
