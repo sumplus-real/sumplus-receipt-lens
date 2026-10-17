@@ -5,9 +5,14 @@ import { u64 } from '@arkiv-network/sdk/attr';
 import { http } from 'viem';
 import { APP,CHAIN_ID,RPC } from './config.mjs';
 export const fields={key:true,creator:true,owner:true,attributes:true,payload:true,createdAt:true,updatedAt:true,expiresAt:true,contentType:true};
-export function makeClient(rpc=RPC){return createPublicClient({chain:tiramisu,transport:http(rpc,{timeout:12000,retryCount:0})});}
+export function makeClient(rpc=RPC,{onResponse}={}){return createPublicClient({chain:tiramisu,transport:http(rpc,{timeout:12000,retryCount:0,onFetchResponse:onResponse})});}
 export function makeQuery(client,{session,issuer,trustedOnly=false,minAmount=0n,from=0n,to=18446744073709551615n,pageSize=2,atBlock}) {
- const q=client.select(fields).where(eq('app',APP),eq('session',session),gte('amount_micro',u64(minAmount)),gte('period',u64(from)),lte('period',u64(to))).limit(pageSize);
+ const q=client.select(fields).where(eq('app',APP),eq('session',session)).limit(pageSize);
+ // Omit unbounded/no-op numeric ranges: they can spend shared anonymous query
+ // cost without narrowing this namespace. Keep useful user-selected ranges.
+ if(minAmount>0n) q.where(gte('amount_micro',u64(minAmount)));
+ if(from>0n) q.where(gte('period',u64(from)));
+ if(to<18446744073709551615n) q.where(lte('period',u64(to)));
  if(trustedOnly) q.createdBy(issuer);
  if(atBlock!==undefined) q.atBlock(atBlock);
  return q;
@@ -30,12 +35,15 @@ export async function collectPages(first,{maxPages=100,maxEntities=1000,onPage=(
 }
 export async function readSession(options) {
  const {rpc=RPC,onPage,...queryOptions}=options;
- const client=makeClient(rpc);
+ const responses=[];
+ const client=makeClient(rpc,{onResponse:r=>responses.push({status:r.status,retryAfter:r.headers.get('Retry-After'),rateLimit:r.headers.get('RateLimit'),cost:r.headers.get('Arkiv-Cost')})});
+ try {
  const chainId=await client.getChainId();if(chainId!==CHAIN_ID) throw Error(`Wrong chain ${chainId}; expected ${CHAIN_ID}`);
  const snapshot=await client.getBlockNumber();
  // SDK 0.8.1 next() reuses the initial request. Pin atBlock BEFORE page one,
  // otherwise a moving head can invalidate the cursor on the public node.
  const query=makeQuery(client,{...queryOptions,atBlock:snapshot});const queryText=query.toString();
  const result=await collectPages(await query.fetch(),{onPage});
- return {...result,entities:result.entities.map(normalizeEntity),query:queryText,chainId,rpc,queriedAt:new Date().toISOString()};
+ return {...result,entities:result.entities.map(normalizeEntity),query:queryText,chainId,rpc,queriedAt:new Date().toISOString(),responses};
+ }catch(error){const last=responses.at(-1);if(last?.status===429){const seconds=Number(last.retryAfter);if(Number.isFinite(seconds)&&seconds>0)error.retryAfterSeconds=seconds;}error.rpcResponses=responses;throw error;}
 }

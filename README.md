@@ -21,7 +21,7 @@ Open the URL printed by Vite. `dist/` is a standalone static site and can be ser
 
 ## Reproduce
 
-Use **Complete session**, **Audit all creators**, **All amounts**, then **Query Arkiv**. The intended seeded session has three signed receipt declarations totaling `0.060000 USDC` and one signed close statement. Check the exact predicate under Connection & query details. Each page has at most two entities, so a full session requires multiple real Arkiv query pages.
+Use **Complete session**, **Audit all creators**, **All amounts**, **18 October 2026**, and **Inspect pagination · 2 records/page**, then **Query Arkiv**. The intended seeded session has three signed receipt declarations totaling `0.060000 USDC` and one signed close statement. Check the exact predicate under Connection & query details. In this explicit pagination mode, each page has at most two entities, so the complete session requires multiple real Arkiv query pages. The normal default is20 records/page to reduce requests.
 
 Use **Disputed session** to examine a missing sequence, a duplicate, a signed payload altered after signing and a different creator impersonating the same session/provider. The app excludes bad sources/data and withholds Complete coverage. Switch to Expected creator only to run `createdBy()` on chain. This view does not claim to enumerate attacks. Amount filtering uses a numeric attribute and explicitly disables completeness assessment.
 
@@ -59,3 +59,6 @@ MIT license. This project issues no token, accepts no payment and uploads no rea
 `lab.html` generates disposable keys in browser memory and runs six real signature/consistency cases using the same verifier. It is prominently labelled **LOCAL ONLY**, performs no Arkiv requests, and is never a fallback for a failed live query. It is useful for browser crypto compatibility and adversarial checks; it is not on-chain evidence. Select a different synthetic billing day in the live reader to exercise numeric period filtering.
 
 CLI diagnostics are written to the ignored `evidence/` directory by default; set `RECEIPT_LENS_EVIDENCE_DIR` to choose another writable output directory. The public demo uses the published synthetic creator pins. To publish your own independent dataset, generate fresh keys and explicitly update the issuer pins in src/config.mjs; do not impersonate the demo issuer.
+
+### RPC quota is a real dependency
+The official anonymous RPC has a limited query-cost budget. During the sprint it returned HTTP429 `ANON_COST_LIMITED`, with remaining0 and Retry-After2103 seconds. The reader now displays the rate limit and server retry advice, clears all results and disables export. It never embeds an access key or silently substitutes fixture data. The default page size is20; select2 to reproduce the pagination probe. Unbounded numeric no-op predicates are omitted while meaningful amount/day ranges remain supported. See friction report for the observed headers and measurement limits.

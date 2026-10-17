@@ -50,3 +50,13 @@ This is a running report of observed behavior, including successful paths. Claim
 
 **Reproduce:** open the app and use the connection field. `lab.html` is independent of the Arkiv integration and never substitutes for it. Evidence screenshots and DOM captures are included with the release package.
 
+
+## 9. Anonymous cost quota: actual release risk, explicit failure and mitigation
+
+**Expected:** repeated anonymous testnet reads eventually encounter an advertised quota; no app may represent quota failure as a zero bill. **Actual at2026-10-18 02:54 Asia/Shanghai:** both the public-origin app and CLI received HTTP429, body `ANON_COST_LIMITED`. A single minimal key-only query was also rejected. Measured response headers were `RateLimit: limit=10000, remaining=0, reset=2103` and `Retry-After:2103` seconds. This establishes the tested anonymous query budget was exhausted, not which individual request spent it or that every user's quota is exhausted. The record is in the delivery evidence `rpc-budget-headers.txt` and `rpc-budget-body.json`.
+
+**Local correction:** `src/errors.mjs` now distinguishes HTTP429 and includes server Retry-After when available. `readSession()` captures exposed RateLimit/Arkiv-Cost/Retry-After headers. A local HTTP429 wire test asserts one failed query, no auto-retry, no fixture result, and propagation of2103-second advice. Clear-on-input-change also prevents old session results appearing under new filter labels.
+
+**Request mitigation, with preserved functionality:** normal page size20 reduces the number of page requests for small bills; users can explicitly select2 for pagination inspection. Queries omit unbounded no-op numeric ranges, while actual chosen billing-day and amount bounds remain typed numeric predicates. These changes reduce request count; we do not claim a measured cost-unit reduction until fresh successful response headers are available. Current real acceptance evidence was recorded before this quota event; recheck after the server-advised reset before marking release healthy again.
+
+**Official docs:** [Access Keys](https://docs.arkiv.network/start-here/access-keys/) explain a free-key onboarding path via wallet sign-in and CAPTCHA, monthly cost quotas, and keeping keys out of browser code. Origin restrictions are attribution, not secret protection. We did not embed a key, introduce a Sumplus proxy, invent higher limits, spend money or evade the anonymous limit. The independent reader deliberately retains its public-RPC dependency. **Suggested first improvement:** expose remaining/reset cost metadata prominently and document anonymous budget behavior and query-cost accounting next to the first query example.

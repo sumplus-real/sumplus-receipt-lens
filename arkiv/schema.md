@@ -47,17 +47,18 @@ const q = client.select({
 }).where(
   eq('app', 'sumplus-receipt-lens-v1'),
   eq('session', 'synthetic-clean-20261018'),
-  gte('amount_micro', u64(0n)),
   gte('period', u64(1792252800n)),
   lte('period', u64(1792339199n)),
 ).limit(2).atBlock(await client.getBlockNumber());
+// An explicit amount filter adds gte('amount_micro', u64(20000n));
+// the amount-filtered result is never labelled a complete session.
 // Trusted scope uses the immutable creator, never provider text or owner:
 q.createdBy('0xCc115e9cC6a7053C6F4999eDd02076C08d17F958');
 let page = await q.fetch();
 while (page.hasNextPage()) page = await page.next();
 ```
 
-Audit scope omits createdBy so users can see impersonating entities. Every returned entity is validated locally before contributing to the trusted subtotal. The billing-day selector maps UTC+8 day boundaries to an inclusive numeric Unix-second range; selecting the next day produces an empty result rather than mixing billing periods. An amount-filtered view explicitly does not establish full session coverage. The app renders the exact predicate with `toString()` for reproduction. CLI evidence records it too.
+Audit scope omits createdBy so users can see impersonating entities. Every returned entity is validated locally before contributing to the trusted subtotal. The billing-day selector maps UTC+8 day boundaries to an inclusive numeric Unix-second range; selecting the next day produces an empty result rather than mixing billing periods. An amount-filtered view explicitly does not establish full session coverage. The normal reader uses20 records/page; choosing the pagination inspection mode uses2. Unbounded no-op amount/period predicates are omitted to avoid unnecessary query work. The app renders the exact predicate with `toString()` for reproduction. CLI evidence records it too.
 
 SDK 0.8.1 must receive an explicit atBlock before the first page on the tested node; otherwise next() may fail when the latest head advances (see friction report). Arkiv supplies **no server-side ordering**. We walk all pages at one cursor-bound block, reject repeated keys/cursors or block changes, and then sort by sequence locally. At most 100 pages/1000 entities per walk; hitting a cap fails rather than declaring partial data complete. A page-2 RPC failure discards the incomplete result. An expired cursor is an error requiring a fresh query, not a silent fallback.
 
