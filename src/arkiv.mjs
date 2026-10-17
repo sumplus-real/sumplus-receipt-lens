@@ -6,7 +6,7 @@ import { http } from 'viem';
 import { APP,CHAIN_ID,RPC } from './config.mjs';
 export const fields={key:true,creator:true,owner:true,attributes:true,payload:true,createdAt:true,updatedAt:true,expiresAt:true,contentType:true};
 export function makeClient(rpc=RPC,{onResponse}={}){return createPublicClient({chain:tiramisu,transport:http(rpc,{timeout:12000,retryCount:0,onFetchResponse:onResponse})});}
-export function makeQuery(client,{session,issuer,trustedOnly=false,minAmount=0n,from=0n,to=18446744073709551615n,pageSize=2,atBlock}) {
+export function makeQuery(client,{session,issuer,trustedOnly=false,minAmount=0n,from=0n,to=18446744073709551615n,pageSize=2,atBlock,owner}) {
  const q=client.select(fields).where(eq('app',APP),eq('session',session)).limit(pageSize);
  // Omit unbounded/no-op numeric ranges: they can spend shared anonymous query
  // cost without narrowing this namespace. Keep useful user-selected ranges.
@@ -14,6 +14,7 @@ export function makeQuery(client,{session,issuer,trustedOnly=false,minAmount=0n,
  if(from>0n) q.where(gte('period',u64(from)));
  if(to<18446744073709551615n) q.where(lte('period',u64(to)));
  if(trustedOnly) q.createdBy(issuer);
+ if(owner) q.ownedBy(owner);
  if(atBlock!==undefined) q.atBlock(atBlock);
  return q;
 }

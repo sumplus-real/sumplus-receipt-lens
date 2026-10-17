@@ -6,4 +6,8 @@
 4. Seeder writes synthetic signed envelopes and typed attributes on Tiramisu. It records a successful create result immediately in `public/creation-evidence.json` and skips that ID on resume, avoiding routine duplicate seeds. A crash after mining but before saving can still require manual transaction reconciliation; do not blindly rerun after uncertain network errors.
 5. Rebuild after adding evidence. Public creator addresses are safe to publish. No private keys or credential-bearing RPC URLs are part of the build.
 
-Receipt entities have 30-day Entity Expiration; close statements 90 days. No production spending, real data, settlement or mainnet effects.
+After creating the ten main records, run `node scripts/ownership-probe.mjs` with the same dedicated wallets. It uses a third synthetic recipient, records each completed step, and refuses to continue an uncertain pending write until manually reconciled. Do not rerun or regenerate keys blindly. The negative-control transport blocks broadcasting. No personal payout wallet is used. Run the bounded post-reset reader to verify actual owners before declaring release complete.
+
+Receipt entities initially have 30-day Entity Expiration; close statements 90 days. The current owner can modify/delete sooner or request Lifetime Extension. No production spending, real data, settlement or mainnet effects.
+
+For a new independent fork/dataset, generate fresh dedicated keys, update all public address pins, and archive the inherited public/creation-evidence.json before seeding. The seeder refuses mismatched inherited creator evidence rather than silently skipping a new publisher. Do not erase the official demo evidence while reproducing its public reads. Ownership/gas diagnostics expect the published demo roles and need their dedicated keys; judges need no keys to read or verify signatures.

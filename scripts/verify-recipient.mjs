@@ -1,0 +1,16 @@
+// Bounded current-release acceptance: two complete session reads, no automatic retry.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {readSession}from '../src/arkiv.mjs';import {verifyEntity,reconcile}from '../src/receipt.mjs';import {CHAIN_ID,ISSUER,ADVERSARY,READER,SESSIONS}from '../src/config.mjs';
+const dir=process.env.RECEIPT_LENS_EVIDENCE_DIR||'evidence';fs.mkdirSync(dir,{recursive:true});
+const reset=Date.parse('2026-10-17T19:29:24Z');if(Date.now()<reset)throw Error('Respect observed RPC Retry-After; do not read before2026-10-17T19:29:24Z');
+const evidence={checkedAt:new Date().toISOString(),chain:CHAIN_ID,synthetic:true,checks:[],sessions:[]};const save=()=>fs.writeFileSync(`${dir}/recipient-acceptance.json`,JSON.stringify(evidence,null,2));const main=JSON.parse(fs.readFileSync('public/creation-evidence.json')).records;
+for(const [i,session]of SESSIONS.entries()){
+ const data=await readSession({session,issuer:ISSUER,owner:READER,pageSize:20,from:1792252800n,to:1792339199n});fs.writeFileSync(`${dir}/recipient-${i===0?'clean':'disputed'}-read.json`,JSON.stringify(data,null,2));
+ assert.equal(data.entities.length,i===0?4:6);assert.equal(data.pages,1);const rows=await Promise.all(data.entities.map(e=>verifyEntity(e,ISSUER,{session,blockNumber:data.blockNumber})));const summary=reconcile(rows);
+ for(const e of data.entities){const original=main.find(x=>x.entityKey===e.key);assert.ok(original);assert.equal(e.owner.toLowerCase(),READER.toLowerCase());assert.equal(e.creator.toLowerCase(),(original.role==='publisher'?ISSUER:ADVERSARY).toLowerCase());}
+ assert.equal(summary.complete,i===0);assert.equal(String(summary.totalMicro),i===0?'60000':'40000');assert.equal(rows.filter(x=>x.trusted).length,4);
+ if(i===1){assert.equal(rows.filter(x=>!x.trustedCreator).length,1);assert.ok(summary.issues.some(x=>/duplicate/i.test(x)));assert.ok(summary.issues.some(x=>/missing/i.test(x)));}
+ evidence.sessions.push({...data,analysis:summary,verified:rows});evidence.checks.push({session,passed:true,entityCount:data.entities.length,allOwnedByRecipient:true,originalCreatorsPreserved:true,expectedTrusted:4,complete:summary.complete,totalMicro:String(summary.totalMicro)});save();console.log(session,'PASS',data.entities.length,'entities, owner+creator+signature+summary',JSON.stringify(data.responses));
+ // Leave a useful reserve for the public browser read. Never hammer an exhausted quota.
+ const remaining=data.responses.map(r=>Number(r.rateLimit?.match(/remaining=(\d+)/)?.[1])).filter(Number.isFinite).at(-1);if(remaining!==undefined&&remaining<1500&&i===0)throw Error('Low anonymous budget after clean read; preserve quota and inspect cost before continuing');
+}
+evidence.passed=true;save();const state=JSON.parse(fs.readFileSync(`${dir}/ownership-probe.json`));state.readbackPending=false;state.readbackVerifiedAt=new Date().toISOString();state.mainReadbacks=evidence.checks;fs.writeFileSync(`${dir}/ownership-probe.json`,JSON.stringify(state,null,2));fs.writeFileSync('public/ownership-evidence.json',JSON.stringify(state,null,2));fs.writeFileSync('public/recipient-acceptance.json',JSON.stringify(evidence,null,2));console.log('Ten original entities now recipient-owned; source/consistency outcomes unchanged.');

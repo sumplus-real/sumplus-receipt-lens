@@ -1,0 +1,76 @@
+{
+  "startedAt": "2026-10-17T19:09:37.710Z",
+  "chain": 7738577,
+  "synthetic": true,
+  "reader": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+  "transactions": [
+    {
+      "id": "fund-reader",
+      "txHash": "0xc3b75c3f2bba9f0a8a979ba10584d0bebe10c55d3b9481188afa13081a5905b3",
+      "valueWei": "10000000000000000",
+      "status": "success"
+    },
+    {
+      "id": "create-disposable",
+      "txHash": "0xbbd7cdad554e46a34a5ef33bc72140049cfdfd25207c26dc4b226a8d7f9cf0cd",
+      "entityKey": "0x186b061df019983eb49dccd2656a68a1549486afa019103a365bcbd2443c940a",
+      "expiresAt": "793616"
+    },
+    {
+      "id": "transfer-disposable",
+      "txHash": "0x1bca155b29cb908ad90a61838ee254413da0e46ae174d261ae581b6332cbf2ec",
+      "entityKey": "0x186b061df019983eb49dccd2656a68a1549486afa019103a365bcbd2443c940a"
+    },
+    {
+      "id": "reader-patch",
+      "txHash": "0x2ef879918d44e80c4e4610975d86f7e41f002e07e017626fa7a0b52d7c3bb6bf",
+      "entityKey": "0x186b061df019983eb49dccd2656a68a1549486afa019103a365bcbd2443c940a"
+    },
+    {
+      "id": "transfer-main-publisher",
+      "txHash": "0xcedfedf7abd9aa4a186e2d877f9db76b505ac284ff40bcabfb838e9b83b34e33",
+      "createdEntities": [],
+      "patchedEntities": [],
+      "deletedEntities": [],
+      "extendedEntities": [],
+      "ownershipChanges": [
+        "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd",
+        "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+        "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+        "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+        "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e",
+        "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+        "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+        "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+        "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e"
+      ]
+    },
+    {
+      "id": "transfer-main-adversary",
+      "txHash": "0x5e7dd534f7d631dc1ee98d34e28996d91ead9895e8351321096596ab2d689eb5",
+      "createdEntities": [],
+      "patchedEntities": [],
+      "deletedEntities": [],
+      "extendedEntities": [],
+      "ownershipChanges": [
+        "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "old-owner-patch",
+      "passed": true,
+      "broadcast": false,
+      "error": "Transaction failed: entity 0x186b061d…3c940a is owned by 0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc, not 0xCc115e9cC6a7053C6F4999eDd02076C08d17F958"
+    },
+    {
+      "id": "old-owner-delete",
+      "passed": true,
+      "broadcast": false,
+      "error": "Transaction failed: entity 0x186b061d…3c940a is owned by 0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc, not 0xCc115e9cC6a7053C6F4999eDd02076C08d17F958"
+    }
+  ],
+  "mutationsComplete": true,
+  "readbackPending": true
+}

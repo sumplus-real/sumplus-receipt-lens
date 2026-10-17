@@ -8,6 +8,7 @@ fs.mkdirSync(evidenceDir,{recursive:true});
 const keys=JSON.parse(fs.readFileSync(path.join(os.homedir(),'.config/sumplus/arkiv-receipt-lens/test-wallets.json')));
 const pub=makeClient();const recordsFile='public/creation-evidence.json';
 const evidence=fs.existsSync(recordsFile)?JSON.parse(fs.readFileSync(recordsFile)):{chain:CHAIN_ID,synthetic:true,startedAt:new Date().toISOString(),creators:{publisher:ISSUER,adversary:ADVERSARY},records:[]};
+if(evidence.chain!==CHAIN_ID||evidence.creators.publisher.toLowerCase()!==ISSUER.toLowerCase()||evidence.creators.adversary.toLowerCase()!==ADVERSARY.toLowerCase())throw Error('Existing creation evidence belongs to different creator pins; archive it before seeding a new independent dataset');
 let blocked=false;
 const save=()=>fs.writeFileSync(recordsFile,JSON.stringify(evidence,(_,v)=>typeof v==='bigint'?String(v):v,2));
 if(await pub.getChainId()!==CHAIN_ID) throw Error('Wrong network; never write outside Tiramisu');

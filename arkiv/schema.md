@@ -10,7 +10,13 @@ The app trusts the configured public RPC for chain metadata and query completene
 
 ## Entity types
 
-`receipt`: one provider usage declaration, with **30-day Entity Expiration** from creation. This covers a prototype invoice-review window. `session-close`: signed expected receipt count and total, with **90-day Entity Expiration** to preserve a dispute reference longer than detailed usage. These are deliberately chosen prototype windows, not a regulatory retention claim. No Lifetime Extension is used or claimed. After detail expiration, the summary cannot reconstruct the payload. Creation transaction hashes and the demo remain available for judges. Users can export a local snapshot before expiry; it is not Arkiv permanent storage.
+`receipt`: one provider usage declaration, with **30-day Entity Expiration** from creation. This covers a prototype invoice-review window. `session-close`: signed expected receipt count and total, with **90-day Entity Expiration** to preserve a dispute reference longer than detailed usage. These are deliberately chosen prototype windows, not a regulatory retention claim. No Lifetime Extension is performed in this demo. The current owner can request it. These are initial expiry settings, not a guarantee of availability: the owner can edit or delete entities sooner. After detail expiration, the summary cannot reconstruct the payload. Creation transaction hashes and the demo remain available for judges. Users can export a local snapshot before removal or expiry; it is not Arkiv permanent storage.
+
+## Native ownership handoff
+
+After publication, the publisher transfers the nine main entities to synthetic recipient `0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc` with `executeBatch({ownershipChanges:[{entityKey,newOwner},...]})`. The adversary also transfers its fake entity to this same recipient. The creator remains the original issuer; this is why `$owner` is a retrieval scope, never an identity check. The default app query uses `ownedBy(READER)`; Any owner removes that narrowing. Both audit and trusted creator scopes remain available.
+
+The separate disposable control proves old-creator patch/delete requests reject with NotOwner before broadcasting, while recipient patch succeeds. Main bill payloads are not edited/deleted for that test. The recipient can delete or change records; changed signed statements fail verification. A user-held JSON export preserves a snapshot but is not an Arkiv inclusion proof. See public/ownership-evidence.json for native handoff transactions and control results.
 
 Both use JSON payloads and these typed attributes:
 
@@ -52,6 +58,8 @@ const q = client.select({
 ).limit(2).atBlock(await client.getBlockNumber());
 // An explicit amount filter adds gte('amount_micro', u64(20000n));
 // the amount-filtered result is never labelled a complete session.
+// Default recipient scope narrows record custody, not publisher identity:
+q.ownedBy('0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc');
 // Trusted scope uses the immutable creator, never provider text or owner:
 q.createdBy('0xCc115e9cC6a7053C6F4999eDd02076C08d17F958');
 let page = await q.fetch();
