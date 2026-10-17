@@ -1,0 +1,1128 @@
+{
+  "checkedAt": "2026-10-17T19:29:33.456Z",
+  "chain": 7738577,
+  "synthetic": true,
+  "checks": [
+    {
+      "session": "synthetic-clean-20261018",
+      "passed": true,
+      "entityCount": 4,
+      "allOwnedByRecipient": true,
+      "originalCreatorsPreserved": true,
+      "expectedTrusted": 4,
+      "complete": true,
+      "totalMicro": "60000"
+    },
+    {
+      "session": "synthetic-dispute-20261018",
+      "passed": true,
+      "entityCount": 6,
+      "allOwnedByRecipient": true,
+      "originalCreatorsPreserved": true,
+      "expectedTrusted": 4,
+      "complete": false,
+      "totalMicro": "40000"
+    }
+  ],
+  "sessions": [
+    {
+      "entities": [
+        {
+          "key": "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "0"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "session-close"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "0"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"session-close\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"0\",\"amountMicro\":\"0\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"0\",\"settlementRef\":\"synthetic:none\",\"synthetic\":true},\"signature\":\"0xa879b3a2a595e5dca542a2dab91454b45ce5fbf3da3dadc2ab91e8f52e166b8346596c1e2e8b8cee0b3faddb713e9655e6af1cca073f4f0ba8599981c52916631b\"}",
+          "createdAt": "706378",
+          "updatedAt": "707226",
+          "expiresAt": "4594378",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "30000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "3"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"3\",\"amountMicro\":\"30000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-3\",\"synthetic\":true},\"signature\":\"0xb8a9ebc8b0638de2dba9e6becf0af8033a063f9a5fa90ec4f03301b5d04cb5e259c2a44c3a88349078f47fc2a828f064846095511ec804a33a62123eb453f0e81c\"}",
+          "createdAt": "706374",
+          "updatedAt": "707226",
+          "expiresAt": "2002374",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "20000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "2"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"2\",\"amountMicro\":\"20000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-2\",\"synthetic\":true},\"signature\":\"0xede5c32c5a803f5ba3e5d93915b9a838041e9351d288b65fb9aee6631128a5481a03c9b23b9c535cf9ce5ad798342ad172c41d519ff45a16f23d70e78aa374641b\"}",
+          "createdAt": "706372",
+          "updatedAt": "707226",
+          "expiresAt": "2002372",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "10000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "1"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"1\",\"amountMicro\":\"10000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-1\",\"synthetic\":true},\"signature\":\"0xabc929485385e22093dbdcecc502abfe8562d3520d8d98c3693d5f37d5797a2765e4e3909483034a1d4a5f6a6b89455ba2046ab0e8ec2111e5a1f463bddfa13e1c\"}",
+          "createdAt": "706369",
+          "updatedAt": "707226",
+          "expiresAt": "2002369",
+          "contentType": "application/json"
+        }
+      ],
+      "blockNumber": "707807",
+      "pages": 1,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-clean-20261018') AND period >= u64(1792252800) AND period <= u64(1792339199) AND $owner = addr(0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T19:29:34.888Z",
+      "responses": [
+        {
+          "status": 200,
+          "retryAfter": null,
+          "rateLimit": "limit=600, remaining=596, reset=19",
+          "cost": null
+        },
+        {
+          "status": 200,
+          "retryAfter": null,
+          "rateLimit": "limit=600, remaining=594, reset=18",
+          "cost": null
+        },
+        {
+          "status": 200,
+          "retryAfter": null,
+          "rateLimit": "limit=600, remaining=592, reset=18",
+          "cost": "100"
+        }
+      ],
+      "analysis": {
+        "receipts": 3,
+        "unique": 3,
+        "excluded": 0,
+        "issues": [],
+        "complete": true,
+        "totalMicro": "60000",
+        "settlementVerified": false
+      },
+      "verified": [
+        {
+          "key": "0x0fd2344500486b1af90dd57d34ea7b080735fd449555086c4436b6bb2d8aaa9b",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "0"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "session-close"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "0"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"session-close\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"0\",\"amountMicro\":\"0\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"0\",\"settlementRef\":\"synthetic:none\",\"synthetic\":true},\"signature\":\"0xa879b3a2a595e5dca542a2dab91454b45ce5fbf3da3dadc2ab91e8f52e166b8346596c1e2e8b8cee0b3faddb713e9655e6af1cca073f4f0ba8599981c52916631b\"}",
+          "createdAt": "706378",
+          "updatedAt": "707226",
+          "expiresAt": "4594378",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "session-close",
+            "session": "synthetic-clean-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "0",
+            "amountMicro": "0",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "0",
+            "settlementRef": "synthetic:none",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        },
+        {
+          "key": "0x61a682f82d933244fe35e018329495658cf4d96dbc95678f0d334957820545c5",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "30000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "3"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"3\",\"amountMicro\":\"30000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-3\",\"synthetic\":true},\"signature\":\"0xb8a9ebc8b0638de2dba9e6becf0af8033a063f9a5fa90ec4f03301b5d04cb5e259c2a44c3a88349078f47fc2a828f064846095511ec804a33a62123eb453f0e81c\"}",
+          "createdAt": "706374",
+          "updatedAt": "707226",
+          "expiresAt": "2002374",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-clean-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "3",
+            "amountMicro": "30000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-3",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        },
+        {
+          "key": "0x15b9794977fdb538020e27b1aef985b9a110adea674e2b01fe36f0199f8af784",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "20000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "2"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"2\",\"amountMicro\":\"20000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-2\",\"synthetic\":true},\"signature\":\"0xede5c32c5a803f5ba3e5d93915b9a838041e9351d288b65fb9aee6631128a5481a03c9b23b9c535cf9ce5ad798342ad172c41d519ff45a16f23d70e78aa374641b\"}",
+          "createdAt": "706372",
+          "updatedAt": "707226",
+          "expiresAt": "2002372",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-clean-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "2",
+            "amountMicro": "20000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-2",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        },
+        {
+          "key": "0x2864e12ed46336d3d5146f1ed8bd664a354d42991b4f6207f4b243ce18adcafd",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "10000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "1"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-clean-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-clean-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"1\",\"amountMicro\":\"10000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-1\",\"synthetic\":true},\"signature\":\"0xabc929485385e22093dbdcecc502abfe8562d3520d8d98c3693d5f37d5797a2765e4e3909483034a1d4a5f6a6b89455ba2046ab0e8ec2111e5a1f463bddfa13e1c\"}",
+          "createdAt": "706369",
+          "updatedAt": "707226",
+          "expiresAt": "2002369",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-clean-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "1",
+            "amountMicro": "10000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-1",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "entities": [
+        {
+          "key": "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+          "creator": "0xC04B75156C2e1280927CD87f3bCe66eD20E73C2f",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "20000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "2"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"2\",\"amountMicro\":\"20000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-2\",\"synthetic\":true},\"signature\":\"0x0ad581cade9ee52befb0fbadfbcaa00798b75e1b51f8e2390dac3ef1e895b7db34adf8de40ee1b4e984fabe5de5d4405ed78dab601249ab42170f71b44793d0a1c\"}",
+          "createdAt": "706396",
+          "updatedAt": "707230",
+          "expiresAt": "2002396",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "0"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "session-close"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "0"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"session-close\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"0\",\"amountMicro\":\"0\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"0\",\"settlementRef\":\"synthetic:none\",\"synthetic\":true},\"signature\":\"0x7b4f8958e7891f1d4947082247980891e143f8ab9fa30b1c3735b512a277d95b1a4b8c075c25b65959d854c85cd92293c8a017c0e23cb2fdbe91fade469a15171c\"}",
+          "createdAt": "706392",
+          "updatedAt": "707226",
+          "expiresAt": "4594392",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "20000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "2"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"2\",\"amountMicro\":\"20000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"999\",\"settlementRef\":\"synthetic:unverified-2\",\"synthetic\":true},\"signature\":\"0x4ef0a2ac9c77c1735a130575c4b844f904f8b0a34f6f6ff246844d2756dbda5e53129225945093d33205948f8f22ba90d5e70e4c44133395bded2415fb9562381c\"}",
+          "createdAt": "706388",
+          "updatedAt": "707226",
+          "expiresAt": "2002388",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "30000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "3"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"3\",\"amountMicro\":\"30000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-3\",\"synthetic\":true},\"signature\":\"0x5e7e20f8fa4a5ca27e03070acc858bfb3c27ae89395dc58bc79d96c76eebf59b4b1ce8dce322d828b4ad09d11138a3244949ade05fa03e79013a255ab4a157b31c\"}",
+          "createdAt": "706386",
+          "updatedAt": "707226",
+          "expiresAt": "2002386",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "30000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "3"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"3\",\"amountMicro\":\"30000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-3\",\"synthetic\":true},\"signature\":\"0x5e7e20f8fa4a5ca27e03070acc858bfb3c27ae89395dc58bc79d96c76eebf59b4b1ce8dce322d828b4ad09d11138a3244949ade05fa03e79013a255ab4a157b31c\"}",
+          "createdAt": "706383",
+          "updatedAt": "707226",
+          "expiresAt": "2002383",
+          "contentType": "application/json"
+        },
+        {
+          "key": "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "10000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "1"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"1\",\"amountMicro\":\"10000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-1\",\"synthetic\":true},\"signature\":\"0x186a8e29de345849f597ed46cd22cbfbbe2d7f42bb1ff08a65f108e4ef70e60006289b8168bfaaf5dd2e68db871cf0abc6cfc2429b4f70c57a3d60b4d615bc1c1c\"}",
+          "createdAt": "706381",
+          "updatedAt": "707226",
+          "expiresAt": "2002381",
+          "contentType": "application/json"
+        }
+      ],
+      "blockNumber": "707820",
+      "pages": 1,
+      "query": "app = str('sumplus-receipt-lens-v1') AND session = str('synthetic-dispute-20261018') AND period >= u64(1792252800) AND period <= u64(1792339199) AND $owner = addr(0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc)",
+      "chainId": 7738577,
+      "rpc": "https://rpc.tiramisu.db-chain.testnet.arkiv.network",
+      "queriedAt": "2026-10-17T19:30:00.943Z",
+      "responses": [
+        {
+          "status": 200,
+          "retryAfter": null,
+          "rateLimit": "limit=600, remaining=599, reset=60",
+          "cost": null
+        },
+        {
+          "status": 200,
+          "retryAfter": null,
+          "rateLimit": "limit=600, remaining=598, reset=60",
+          "cost": null
+        },
+        {
+          "status": 200,
+          "retryAfter": null,
+          "rateLimit": "limit=600, remaining=597, reset=60",
+          "cost": "100"
+        }
+      ],
+      "analysis": {
+        "receipts": 3,
+        "unique": 2,
+        "excluded": 2,
+        "issues": [
+          "Duplicate sequence 3",
+          "Missing sequence 2",
+          "Amount total differs from signed close statement"
+        ],
+        "complete": false,
+        "totalMicro": "40000",
+        "settlementVerified": false
+      },
+      "verified": [
+        {
+          "key": "0xe233f32c0caf254b4d0b677af21449f16d8115037ba50cee5eaa5194593d1cda",
+          "creator": "0xC04B75156C2e1280927CD87f3bCe66eD20E73C2f",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "20000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "2"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"2\",\"amountMicro\":\"20000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-2\",\"synthetic\":true},\"signature\":\"0x0ad581cade9ee52befb0fbadfbcaa00798b75e1b51f8e2390dac3ef1e895b7db34adf8de40ee1b4e984fabe5de5d4405ed78dab601249ab42170f71b44793d0a1c\"}",
+          "createdAt": "706396",
+          "updatedAt": "707230",
+          "expiresAt": "2002396",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-dispute-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "2",
+            "amountMicro": "20000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-2",
+            "synthetic": true
+          },
+          "signer": "0xC04B75156C2e1280927CD87f3bCe66eD20E73C2f",
+          "trustedCreator": false,
+          "valid": true,
+          "trusted": false,
+          "errors": []
+        },
+        {
+          "key": "0x364d88b08555c65d679514c2e2451fc56c8a0961405347b96a07da2fc1ddb16e",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "0"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "session-close"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "0"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"session-close\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"0\",\"amountMicro\":\"0\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"0\",\"settlementRef\":\"synthetic:none\",\"synthetic\":true},\"signature\":\"0x7b4f8958e7891f1d4947082247980891e143f8ab9fa30b1c3735b512a277d95b1a4b8c075c25b65959d854c85cd92293c8a017c0e23cb2fdbe91fade469a15171c\"}",
+          "createdAt": "706392",
+          "updatedAt": "707226",
+          "expiresAt": "4594392",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "session-close",
+            "session": "synthetic-dispute-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "0",
+            "amountMicro": "0",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "0",
+            "settlementRef": "synthetic:none",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        },
+        {
+          "key": "0x1e1581b1bbb71f75a8f10b722168ba38f25185634ce8a10a44e70d6e74942354",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "20000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "2"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"2\",\"amountMicro\":\"20000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"999\",\"settlementRef\":\"synthetic:unverified-2\",\"synthetic\":true},\"signature\":\"0x4ef0a2ac9c77c1735a130575c4b844f904f8b0a34f6f6ff246844d2756dbda5e53129225945093d33205948f8f22ba90d5e70e4c44133395bded2415fb9562381c\"}",
+          "createdAt": "706388",
+          "updatedAt": "707226",
+          "expiresAt": "2002388",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-dispute-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "2",
+            "amountMicro": "20000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "999",
+            "settlementRef": "synthetic:unverified-2",
+            "synthetic": true
+          },
+          "signer": "0xa76A51BC35FA1eb29e7D5532A5AbC94E2598dF49",
+          "trustedCreator": true,
+          "valid": false,
+          "trusted": false,
+          "errors": [
+            "SIGNATURE_CREATOR_MISMATCH"
+          ]
+        },
+        {
+          "key": "0x2e5ddb28c58d3577f1f9b7dc208dddfbd31abe83477f86b0f8e3f3c6e11ae56f",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "30000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "3"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"3\",\"amountMicro\":\"30000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-3\",\"synthetic\":true},\"signature\":\"0x5e7e20f8fa4a5ca27e03070acc858bfb3c27ae89395dc58bc79d96c76eebf59b4b1ce8dce322d828b4ad09d11138a3244949ade05fa03e79013a255ab4a157b31c\"}",
+          "createdAt": "706386",
+          "updatedAt": "707226",
+          "expiresAt": "2002386",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-dispute-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "3",
+            "amountMicro": "30000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-3",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        },
+        {
+          "key": "0xefa0f3a0245c9280f24a6a332db1cdbb94df611ca7981647627b2031d11b6d42",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "30000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "3"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"3\",\"amountMicro\":\"30000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-3\",\"synthetic\":true},\"signature\":\"0x5e7e20f8fa4a5ca27e03070acc858bfb3c27ae89395dc58bc79d96c76eebf59b4b1ce8dce322d828b4ad09d11138a3244949ade05fa03e79013a255ab4a157b31c\"}",
+          "createdAt": "706383",
+          "updatedAt": "707226",
+          "expiresAt": "2002383",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-dispute-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "3",
+            "amountMicro": "30000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-3",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        },
+        {
+          "key": "0xa5a2e76153e10498acc833a533ba6312741857e90e379a646e092a3084dd9f3e",
+          "creator": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "owner": "0x9E7f593474Fc22d833f7568AFeE8ddaBb99cBCDc",
+          "attributes": {
+            "amount_micro": {
+              "type": "u64",
+              "value": "10000"
+            },
+            "app": {
+              "type": "str",
+              "value": "sumplus-receipt-lens-v1"
+            },
+            "kind": {
+              "type": "str",
+              "value": "receipt"
+            },
+            "period": {
+              "type": "u64",
+              "value": "1792252800"
+            },
+            "provider": {
+              "type": "str",
+              "value": "synthetic-ai-provider"
+            },
+            "sequence": {
+              "type": "u64",
+              "value": "1"
+            },
+            "session": {
+              "type": "str",
+              "value": "synthetic-dispute-20261018"
+            }
+          },
+          "payload": "{\"statement\":{\"schema\":\"receipt-lens/1\",\"chain\":7738577,\"app\":\"sumplus-receipt-lens-v1\",\"kind\":\"receipt\",\"session\":\"synthetic-dispute-20261018\",\"provider\":\"synthetic-ai-provider\",\"sequence\":\"1\",\"amountMicro\":\"10000\",\"period\":\"1792252800\",\"expectedCount\":\"3\",\"totalMicro\":\"60000\",\"usageUnits\":\"100\",\"settlementRef\":\"synthetic:unverified-1\",\"synthetic\":true},\"signature\":\"0x186a8e29de345849f597ed46cd22cbfbbe2d7f42bb1ff08a65f108e4ef70e60006289b8168bfaaf5dd2e68db871cf0abc6cfc2429b4f70c57a3d60b4d615bc1c1c\"}",
+          "createdAt": "706381",
+          "updatedAt": "707226",
+          "expiresAt": "2002381",
+          "contentType": "application/json",
+          "body": {
+            "schema": "receipt-lens/1",
+            "chain": 7738577,
+            "app": "sumplus-receipt-lens-v1",
+            "kind": "receipt",
+            "session": "synthetic-dispute-20261018",
+            "provider": "synthetic-ai-provider",
+            "sequence": "1",
+            "amountMicro": "10000",
+            "period": "1792252800",
+            "expectedCount": "3",
+            "totalMicro": "60000",
+            "usageUnits": "100",
+            "settlementRef": "synthetic:unverified-1",
+            "synthetic": true
+          },
+          "signer": "0xCc115e9cC6a7053C6F4999eDd02076C08d17F958",
+          "trustedCreator": true,
+          "valid": true,
+          "trusted": true,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

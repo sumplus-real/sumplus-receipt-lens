@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "durationSeconds": 140,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "captureSourceCommit": "6c03076ca5e0def64c4e3bf92e9124db9c37cfb4",
+  "queryModuleSha256": "7087e3b687c454c05fbbb7da90562873dba8fa1c5f36b176c1b18d3255cce1d0",
+  "clean": {
+    "block": "707829",
+    "entities": 4,
+    "pages": 2,
+    "recipientOwned": 4
+  },
+  "disputed": {
+    "block": "707852",
+    "entities": 6,
+    "pages": 3,
+    "recipientOwned": 6
+  },
+  "explanation": "Actual public-origin query captures after advised reset. Video includes labelled controlled RPC failure, native ownership and expiry evidence. Later release adds the video link and documentation; query module is unchanged."
+}
