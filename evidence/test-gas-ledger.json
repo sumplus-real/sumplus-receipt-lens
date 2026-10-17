@@ -1,24 +1,160 @@
 {
-  "checkedAt": "2026-10-17T18:45:26.563Z",
+  "checkedAt": "2026-10-17T19:10:53.461Z",
   "chain": 7738577,
   "token": "TEST GLM ONLY",
-  "transactionCount": 11,
-  "initialTestBalanceWei": {
-    "publisher": "5000000000000000000",
-    "adversary": "1000000000000000000"
-  },
+  "transactionCount": 17,
+  "initialAggregateBalanceWei": "6000000000000000000",
   "remainingTestBalanceWei": {
-    "publisher": "4998798919997597840",
-    "adversary": "999876679999753360"
+    "publisher": "4988481113996962228",
+    "adversary": "999851249999702500",
+    "reader": "9954679999909360"
   },
   "executionFeeWei": {
-    "publisher": "1201080002402160",
-    "adversary": "123320000246640"
+    "publisher": "1518886003037772",
+    "adversary": "148750000297500",
+    "reader": "45320000090640"
   },
-  "totalExecutionFeeWei": "1324400002648800",
-  "balanceDeltaMatches": {
-    "publisher": true,
-    "adversary": true
-  },
-  "scope": "Our 11 synthetic Tiramisu creation transactions only. Excludes gas paid by the source wallet for funding transfers. No mainnet or paid model/API spending."
+  "totalExecutionFeeWei": "1712956003425912",
+  "totalExecutionFeeTestGlm": "0.001712956003425912",
+  "aggregateBalanceDeltaMatches": true,
+  "internalTransferWei": "10000000000000000",
+  "scope": "Our dedicated synthetic Tiramisu transactions; recipient funding is an internal transfer, not a fee. Source-wallet funding gas excluded. No mainnet or paid APIs.",
+  "transactions": [
+    {
+      "hash": "0x169e0cf39dce74d3800bfd63205f567121b4ae7173b27359a37afaf1cfb8576e",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123288",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123288000246576"
+    },
+    {
+      "hash": "0x80bfd1400eadfdae78de6151bfad68a2660817ba8218a578f5cc717b46a8a003",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123288",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123288000246576"
+    },
+    {
+      "hash": "0xea4a34a0d3832d9018c8e50237909e999fbce2344a85e9fe88f500b6dd6f9067",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123288",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123288000246576"
+    },
+    {
+      "hash": "0x4a42134373711e6304ce9928b72acb58c549b039859122836666cb05f853e7bb",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123160",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123160000246320"
+    },
+    {
+      "hash": "0x4423801a2362346b01146aabaff399c2a0bbb05f87c1ff261a34e888ae8767b2",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123320000246640"
+    },
+    {
+      "hash": "0x95b9be10f92eba6e14d78c91c6255e15952dc132ad7f76ff2542109259174aaa",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123320000246640"
+    },
+    {
+      "hash": "0x7892a9dc8ce0a649b54ad7585f24dd570bad5aaada8916de4e2f5eae95e4c194",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123320000246640"
+    },
+    {
+      "hash": "0x8e3950b5c1e1142ee4815eaf6787ad92f3636939e2c8471ab77cceb8e0e809f8",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123320000246640"
+    },
+    {
+      "hash": "0x9232126164ce4c7f8a26b68a3f5ee8cbb3f071b1066de41789661005352ed544",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "123192",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123192000246384"
+    },
+    {
+      "hash": "0x22c0be9e60daafbd8d8e0ce88a19485ca816e8bbb3c6bac03dca2b721c876582",
+      "role": "adversary",
+      "status": "success",
+      "gasUsed": "123320",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "123320000246640"
+    },
+    {
+      "hash": "0xb7ced167189c8f687c52588c17d84609adc4a587de98c41bd55cc09882a2a439",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "91584",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "91584000183168"
+    },
+    {
+      "hash": "0xc3b75c3f2bba9f0a8a979ba10584d0bebe10c55d3b9481188afa13081a5905b3",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "21000",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "21000000042000"
+    },
+    {
+      "hash": "0xbbd7cdad554e46a34a5ef33bc72140049cfdfd25207c26dc4b226a8d7f9cf0cd",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "91376",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "91376000182752"
+    },
+    {
+      "hash": "0x1bca155b29cb908ad90a61838ee254413da0e46ae174d261ae581b6332cbf2ec",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "25430",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "25430000050860"
+    },
+    {
+      "hash": "0x2ef879918d44e80c4e4610975d86f7e41f002e07e017626fa7a0b52d7c3bb6bf",
+      "role": "reader",
+      "status": "success",
+      "gasUsed": "45320",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "45320000090640"
+    },
+    {
+      "hash": "0xcedfedf7abd9aa4a186e2d877f9db76b505ac284ff40bcabfb838e9b83b34e33",
+      "role": "publisher",
+      "status": "success",
+      "gasUsed": "180000",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "180000000360000"
+    },
+    {
+      "hash": "0x5e7dd534f7d631dc1ee98d34e28996d91ead9895e8351321096596ab2d689eb5",
+      "role": "adversary",
+      "status": "success",
+      "gasUsed": "25430",
+      "effectiveGasPrice": "1000000002",
+      "feeWei": "25430000050860"
+    }
+  ]
 }
