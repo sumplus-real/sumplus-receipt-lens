@@ -1,7 +1,9 @@
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
 import {createWalletClient} from '@arkiv-network/sdk';import {tiramisu} from '@arkiv-network/sdk/chains';import {ExpirationTime,jsonToPayload} from '@arkiv-network/sdk/utils';import {eq} from '@arkiv-network/sdk/query';import {http} from 'viem';import {privateKeyToAccount} from 'viem/accounts';
 import {makeClient} from '../src/arkiv.mjs';import {APP,ISSUER,CHAIN_ID} from '../src/config.mjs';
-const file='../evidence/expiry-probe.json';const pub=makeClient();if(await pub.getChainId()!==CHAIN_ID)throw Error('Wrong chain');
+const evidenceDir=process.env.RECEIPT_LENS_EVIDENCE_DIR||'evidence';
+fs.mkdirSync(evidenceDir,{recursive:true});
+const file=`${evidenceDir}/expiry-probe.json`;const pub=makeClient();if(await pub.getChainId()!==CHAIN_ID)throw Error('Wrong chain');
 let state=fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):{startedAt:new Date().toISOString(),expected:'Entity queryable before short expiration, absent afterward; creation transaction still retrievable'};
 const save=()=>fs.writeFileSync(file,JSON.stringify(state,(_,v)=>typeof v==='bigint'?String(v):v,2));
 if(!state.entityKey){

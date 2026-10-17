@@ -4,6 +4,8 @@ When an AI provider's billing dashboard disappears, its users lose their only vi
 
 **Synthetic prototype only.** Authorship and consistency are checked; actual AI calls and payments are not proved. Testnet only; no real personal data.
 
+Live app: https://sumplus-real.github.io/sumplus-receipt-lens/
+
 ## Run
 
 Node 20.19+ and npm. Exact dependency versions are locked.
@@ -55,3 +57,5 @@ MIT license. This project issues no token, accepts no payment and uploads no rea
 ## Local validator lab
 
 `lab.html` generates disposable keys in browser memory and runs six real signature/consistency cases using the same verifier. It is prominently labelled **LOCAL ONLY**, performs no Arkiv requests, and is never a fallback for a failed live query. It is useful for browser crypto compatibility and adversarial checks; it is not on-chain evidence. Select a different synthetic billing day in the live reader to exercise numeric period filtering.
+
+CLI diagnostics are written to the ignored `evidence/` directory by default; set `RECEIPT_LENS_EVIDENCE_DIR` to choose another writable output directory. The public demo uses the published synthetic creator pins. To publish your own independent dataset, generate fresh keys and explicitly update the issuer pins in src/config.mjs; do not impersonate the demo issuer.

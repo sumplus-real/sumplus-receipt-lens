@@ -3,6 +3,8 @@ import { createWalletClient } from '@arkiv-network/sdk';import { tiramisu } from
 import { u64 } from '@arkiv-network/sdk/attr';import { ExpirationTime,jsonToPayload } from '@arkiv-network/sdk/utils';
 import { http } from 'viem';import {privateKeyToAccount} from 'viem/accounts';
 import {makeClient,readSession} from '../src/arkiv.mjs';import {canonical} from '../src/receipt.mjs';import {APP,CHAIN_ID,ISSUER,ADVERSARY,SESSIONS} from '../src/config.mjs';
+const evidenceDir=process.env.RECEIPT_LENS_EVIDENCE_DIR||'evidence';
+fs.mkdirSync(evidenceDir,{recursive:true});
 const keys=JSON.parse(fs.readFileSync(path.join(os.homedir(),'.config/sumplus/arkiv-receipt-lens/test-wallets.json')));
 const pub=makeClient();const recordsFile='public/creation-evidence.json';
 const evidence=fs.existsSync(recordsFile)?JSON.parse(fs.readFileSync(recordsFile)):{chain:CHAIN_ID,synthetic:true,startedAt:new Date().toISOString(),creators:{publisher:ISSUER,adversary:ADVERSARY},records:[]};
@@ -34,7 +36,7 @@ for(const role of ['publisher','adversary']) {
  }
 }
 evidence.fundingBlocked=blocked;evidence.complete=!blocked&&evidence.records.length===10;save();
-for(const session of SESSIONS){const result=await readSession({session,issuer:ISSUER});fs.writeFileSync(`../evidence/${session}-read.json`,JSON.stringify(result,null,2));console.log(session,result.entities.length,'entities',result.pages,'pages');}
+for(const session of SESSIONS){const result=await readSession({session,issuer:ISSUER});fs.writeFileSync(`${evidenceDir}/${session}-read.json`,JSON.stringify(result,null,2));console.log(session,result.entities.length,'entities',result.pages,'pages');}
 save();
 
 evidence.fundingBlocked=blocked;evidence.complete=!blocked&&evidence.records.length===10;save();if(!evidence.complete)process.exitCode=2;
